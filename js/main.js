@@ -21,7 +21,8 @@ function createCards(products) {
     console.log(products[0].name)
     //crear una card para cada uno de los productos con su informacion
     products.forEach((product) => {
-        divData.innerHTML +=`
+
+        const card =`
             <div class="card" style="width: 18rem">
                 <img src="${product.image}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -31,7 +32,8 @@ function createCards(products) {
             </div>
             </div>
             </br>`;
-            divData.append();
+    
+        divData.insertAdjacentHTML("beforeend",card)
     });
 }//createCards
 
